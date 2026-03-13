@@ -1,14 +1,17 @@
 const btnInvestigacao = document.querySelectorAll('button[name="investigacaoBotao"]');
 
+/***
+ * Altera o botao de "saber mais" para mostra ou esconder texto
+ */
 btnInvestigacao.forEach((btn) => {
     btn.addEventListener("click", function() {
         const contentor = this.closest('.investigacao-contentor');
-        const saberMais = contentor.querySelector(".saberTexto");
-        if (saberMais.style.display === "block") {
-            saberMais.style.display = "none";
+        const saberMaisTexto = contentor.querySelector(".saberTexto");
+        if (saberMaisTexto.style.display === "block") {
+            saberMaisTexto.style.display = "none";
             this.textContent = "Saber Mais";
         } else {
-            saberMais.style.display = "block";
+            saberMaisTexto.style.display = "block";
             this.textContent = "Fechar";
         }
     });

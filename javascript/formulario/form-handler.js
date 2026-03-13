@@ -15,7 +15,7 @@ async function sleep(ms) {
 
 /**
  * Verifica se o email está num formato valido
- * @param {*} email 
+ * @param {email a ser validado} email 
  * @returns None
  */
 function validateEmail(email) {
