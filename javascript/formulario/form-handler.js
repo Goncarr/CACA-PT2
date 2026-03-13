@@ -29,19 +29,19 @@ function validateEmail(email) {
  */
 async function sendEmail(){
     if (nomeEl.value == ""){
-        falhaEL.innerHTML = "Erro: Nome inválido";
+        falhaEL.textContent = "Erro: Nome inválido";
         falhaEL.style.display= "flex";
         await sleep(3000)
         falhaEL.style.display= "none";
     }
     else if (emailEl.value == "" || !validateEmail(emailEl.value)){
-        falhaEL.innerHTML = "Erro: Email vazio ou inválido";
+        falhaEL.textContent = "Erro: Email vazio ou inválido";
         falhaEL.style.display= "flex";
         await sleep(3000)
         falhaEL.style.display= "none";
     }
     else if (mensagemEl.value == ""){
-        falhaEL.innerHTML = "Erro: Mensagem vazia";
+        falhaEL.textContent = "Erro: Mensagem vazia";
         falhaEL.style.display= "flex";
         await sleep(3000)
         falhaEL.style.display= "none";

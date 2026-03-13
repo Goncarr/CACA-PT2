@@ -23,7 +23,7 @@ window.addEventListener('resize', () => {
  * Procura se um ficheiro json existe
  * @param {Ficheiro json} jsonUrl 
  */
-function loadData(jsonUrl) {
+function loadData(jsonUrl,tipo) {
   fetch(jsonUrl)
     .then(function (response) {
       if (response.ok) {
@@ -33,7 +33,7 @@ function loadData(jsonUrl) {
     })
     .then(function (data) {
       jsonData = data;
-      Createchart(jsonData, currentChartType);
+      Createchart(jsonData, currentChartType,tipo);
     })
     .catch(function (error) {
       console.error(error);
@@ -47,7 +47,7 @@ function loadData(jsonUrl) {
 function setChartType(chartType) {
   currentChartType = chartType;
   if (jsonData) {
-    Createchart(jsonData, currentChartType);
+    Createchart(jsonData, currentChartType,tipo);
   }
 }
 
@@ -57,7 +57,7 @@ function setChartType(chartType) {
  * @param {Tipo de chart} type 
  * @returns 
  */
-function Createchart(data, type) {
+function Createchart(data, type,tipo) {
   if (!ctx) {
     console.warn("Canvas element not found: #myChart");
     return;
@@ -73,7 +73,7 @@ function Createchart(data, type) {
       labels: data.map((row) => row.month),
       datasets: [
         {
-          label: "Nº de Investigacoes",
+          label: tipo,
           data: data.map((row) => row.income),
           borderWidth: 1,
         },
@@ -89,4 +89,4 @@ function Createchart(data, type) {
   });
 }
 
-loadData('utils/datainvestigacao.json');
+loadData('utils/datainvestigacao.json','numero de investigadores');
