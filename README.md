@@ -36,7 +36,7 @@ Para garantir a coerência estética em toda a experiência de navegação, a pa
 
 A nível de animações, foi feito o uso de bibliotecas externas:
 
-    Biblioteca Grasp: Utilizada para a implementação de efeitos de fade-in e fade-out na transição entre secções.
+- Biblioteca Grasp: Utilizada para a implementação de efeitos de fade-in e fade-out na transição entre secções.
 
-    Biblioteca Chart.js: Aplicada na renderização de gráficos, garantindo que os dados  sejam apresentados de forma clara e visualmente apelativa.
+- Biblioteca Chart.js: Aplicada na renderização de gráficos, garantindo que os dados  sejam apresentados de forma clara e visualmente apelativa.
 
