@@ -869,7 +869,7 @@ footer input {
     }
 
     .conquistas p {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
 
     .investigacao-contentor p{
@@ -885,7 +885,7 @@ footer input {
     }
 
     .conquistas-container button {
-        font-size: clamp(0.65rem, 3vw, 0.9rem);
+        font-size: clamp(0.8rem, 3vw, 0.9rem);
         padding: 0.35rem 0.5rem;
     }
 
