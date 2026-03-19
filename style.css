@@ -567,12 +567,12 @@ footer input {
     }
 
     ul {
-        font-size:clamp(1.6rem,2.2vw,8rem);
-        gap:1rem;
+        font-size:clamp(1.8rem,1.5vw,8rem);
+        gap:.6rem;
     }
 
     h1 {
-        font-size: clamp(3rem,2.5vw,8rem);
+        font-size: clamp(2.5rem,2.2vw,8rem);
     }
 
     .objetivo h2, .missao h2 {
