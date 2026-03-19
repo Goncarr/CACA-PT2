@@ -1,30 +1,27 @@
-const scrollbutton = document.querySelector(".scroll-to-top");
+const btnScroll = document.querySelector(".scroll-to-top");
 
 /**
- * Verifica se o botão de scroll to top deve ser visivel ou nao
- * Se tiver a uma distancia inferir a 150 do top, o botão nao aparece
- * Caso contrário o botão será visivel para o utilizador
+ * Controla a visibilidade de um elemento com base na posição do scroll
+ * @param {HTMLElement} elemento - O elemento a mostrar/esconder
+ * @param {number} distancia - A distância em pixels do topo
  */
-const refreshbuttonVisibility = () => {
-  if (document.documentElement.scrollTop <= 150) {
-    scrollbutton.style.display = "none";
-  } else {
-    scrollbutton.style.display = "block";
-  }
-};
+function atualizarVisibilidadeScroll(elemento, distancia) {
+    if (window.scrollY > distancia) {
+        elemento.style.display = "block";
+    } else {
+        elemento.style.display = "none";
+    }
+}
 
-refreshbuttonVisibility();
+/**
+ * Esta função faz um scroll suave até ao topo da página
+ */
+function voltarAoTopo() {window.scrollTo({ top: 0, behavior: "smooth" });}
 
-/*Volta para o topo da janela quando o utilizador clicar no botão*/
-scrollbutton.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
+/**
+ * 
+ * @param {event} scroll - evento de scroll
+ */
+window.addEventListener("scroll", function(){atualizarVisibilidadeScroll(btnScroll, 150);});
 
-/** Irá chamar a funçao "refreshbuttonVisibility() quando o
- *  utilizador fizer a funcao de scroll" */
-document.addEventListener("scroll", () => {
-  refreshbuttonVisibility();
-});
+btnScroll.addEventListener("click", voltarAoTopo);

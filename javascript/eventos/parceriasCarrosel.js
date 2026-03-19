@@ -2,16 +2,21 @@ let slideIndex = 1;
 let slideTimer;
 showSlides(slideIndex);
 
-function plusSlides(n) {
+function plusSlides(direction) {
   clearTimeout(slideTimer); 
-  showSlides(slideIndex += n);
+  showSlides(slideIndex += direction);
 }
-
+/**
+ * @param {int} n - index do  slide
+ * a funcao  corre a funcao showslides
+*/
 function currentSlide(n) {
   clearTimeout(slideTimer);
   showSlides(slideIndex = n);
 }
-
+/**
+ * @param {int} n - 
+ */
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -28,6 +33,7 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "flex"; 
   slides[slideIndex - 1].classList.add("active");
   dots[slideIndex - 1].className += " active";
+  
   slideTimer = setTimeout(function() {
     plusSlides(1); 
   }, 5000); 

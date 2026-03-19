@@ -14,7 +14,22 @@ function getVisibleCount() {
 }
 
 /**
- * Atualiza os slides
+ * Esta funcao irá indicar se os slides devem mexer-se para a direita ou esquerda
+ * se o numero for negativo, move-se para a esquerda
+ * se o numero for positivo, move-se para a direita
+ * 
+ * @param {int} direction - direcao que vai mover os slides
+ */
+function moveSlide(direction) {
+  currentIndex += direction;
+  updateSlider();
+}
+
+/**
+ * Atualiza a posição visual do carrossel (slider) de investigação.
+ * Calcula o deslocamento do "track" com base no índice atual, no número de 
+ * cartões visíveis (dependente da resolução) e na largura total de cada cartão 
+ * (incluindo margens), aplicando uma transformação CSS para mover os slides.
  */
 function updateSlider() {
   const track = document.getElementById('track');
@@ -28,23 +43,13 @@ function updateSlider() {
   if (currentIndex > maxIndex) currentIndex = 0;
 
   const card = cards[0];
-  const style = window.getComputedStyle(card);
+  const style = globalThis.getComputedStyle(card);
   const cardWidth = card.offsetWidth
-    + parseInt(style.marginLeft)
-    + parseInt(style.marginRight);
+    + Number.parseInt(style.marginLeft)
+    + Number.parseInt(style.marginRight);
 
   track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
 }
 
-/**
- * indica par mover para a esquerda ou direita
- * @param {} direction 
- */
-function moveSlide(direction) {
-  currentIndex += direction;
-  updateSlider();
-}
-
 window.addEventListener('resize', updateSlider); 
-
 

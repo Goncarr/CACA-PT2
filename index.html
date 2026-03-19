@@ -188,7 +188,7 @@
                     <div class="email-campos">
                         <input id="nome" type="text" placeholder="Nome">
                         <input id="email" type="email" placeholder="Email">
-                        <button onclick="sendEmail()">Enviar Mensagem</button>
+                        <button id="enviar" onclick="sendEmail('nome','email','mensagem','.envio-erro','.envio-sucesso')">Enviar Mensagem</button>
                     </div>
                     <textarea id="mensagem" maxlength="450" placeholder="Escreva a sua mensagem aqui..."></textarea>
                 </div>
@@ -205,7 +205,7 @@
     <div class="envio-erro">Erro ao enviar mensagem</div>
     <div class="envio-sucesso">Mensagem enviada com sucesso</div>
 
-    <button class="scroll-to-top"><i class="fa fa-arrow-up"></i></button>
+    <button class="scroll-to-top" ><i class="fa fa-arrow-up"></i></button>
 
     <!-- Bibliotecas externas -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

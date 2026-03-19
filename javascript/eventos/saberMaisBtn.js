@@ -1,7 +1,8 @@
 const btnInvestigacao = document.querySelectorAll('button[name="investigacaoBotao"]');
 
 /***
- * Altera o botao de "saber mais" para mostra ou esconder texto
+ * Expoe texto para o utilizador caso ele clique no botão de "saber mais".
+ * @param {} btn - botão que foi clicado
  */
 btnInvestigacao.forEach((btn) => {
     btn.addEventListener("click", function() {
