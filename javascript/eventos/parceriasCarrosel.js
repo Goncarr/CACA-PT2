@@ -15,7 +15,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 /**
- * @param {int} n - 
+ * @param {int} n - index do slide 
  */
 function showSlides(n) {
   let i;
