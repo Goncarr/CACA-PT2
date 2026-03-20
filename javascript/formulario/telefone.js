@@ -5,6 +5,9 @@ const selected_option = document.querySelector('.selected-option > div');
 
 let options = null;
 
+/**
+ * Loop que itera por todos os paises e os adiciona ao site 
+ */
 for(country of countries){
     const option = `<li class="option">
                         <div>
@@ -23,6 +26,10 @@ selected_option.addEventListener('click', () =>{
     selected_option.classList.toggle('active')
 })
 
+/**
+ * Nesta função quando o utilizador seleciona uma linguagem do seu telefone
+ * o telefone ativo é alterado pelo selecionado.
+ */
 function selectOption(){
     console.log(this);
     const icon = this.querySelector('.iconify').cloneNode(true);
@@ -34,6 +41,10 @@ function selectOption(){
     input_box.value = phone_code.textContent;
 }
 
+/**
+ * Esta função permite o utilizador pesquisar pelo país do seu telefone
+ * através do input que escreveu
+ */
 function searchCountry(){
     let searchEl = search_box.value.toLowerCase();
     for(option of options){
@@ -42,6 +53,8 @@ function searchCountry(){
     }
 }
 
+//Evento que altera o simbolo quando o utilizador clica
 options.forEach(option=> option.addEventListener('click', selectOption))
 
+//Evento que filtra os pais que aparecem pelo input do utilizador
 search_box.addEventListener('input', searchCountry);

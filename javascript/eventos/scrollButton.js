@@ -6,7 +6,8 @@ const btnScroll = document.querySelector(".scroll-to-top");
  * @param {number} distancia - A distância em pixels do topo
  */
 function atualizarVisibilidadeScroll(elemento, distancia) {
-    if (window.scrollY > distancia) {
+    
+    if (document.documentElement.scrollTop > distancia) {
         elemento.style.display = "block";
     } else {
         elemento.style.display = "none";
