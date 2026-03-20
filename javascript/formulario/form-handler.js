@@ -1,3 +1,5 @@
+
+
 /**
  * A função verifica se o email está num formato aceitavel
  *  através de um regex, no qual verifica se
@@ -9,6 +11,16 @@ function validateEmail(email) {
   return email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,3}$/g);
 };
 
+/**
+ * A função verifica se o número de telefone está num formato
+ * valido
+ * @param {string} phone 
+ * @returns boolean
+ */
+function validatePhone(phone) {
+    const digitos = phone.replace(/[\s\-\(\)\+]/g, '').trim();
+    return /^\d{7,15}$/.test(digitos);
+}
 
 /**
  * A função verifica se o utilizador tem todos os parametros do formulário preenchidos, estes sendo
@@ -37,6 +49,7 @@ function sendEmail(nome,email,mensagem,falha,sucesso){
     }
     
     else if (emailEl.value == "" || !validateEmail(emailEl.value)){
+        falhaEL.textContent = "Erro: Email Inválido";
         falhaEL.style.display= "flex";
         setTimeout(function(){
           falhaEL.style.display= "none"  
@@ -44,6 +57,14 @@ function sendEmail(nome,email,mensagem,falha,sucesso){
     }
     else if (mensagemEl.value == ""){
         falhaEL.textContent = "Erro: Mensagem vazia";
+        falhaEL.style.display= "flex";
+        setTimeout(function(){
+          falhaEL.style.display= "none"  
+        } , 3000);
+    }
+
+    else if (!validatePhone(input_box.value)){
+        falhaEL.textContent = "Erro: Telefone Inválido";
         falhaEL.style.display= "flex";
         setTimeout(function(){
           falhaEL.style.display= "none"  

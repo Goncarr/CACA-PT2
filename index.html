@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Académico Clínico dos Açores - CACA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
@@ -188,7 +189,36 @@
                     <div class="email-campos">
                         <input id="nome" type="text" placeholder="Nome">
                         <input id="email" type="email" placeholder="Email">
-                        <button id="enviar" onclick="sendEmail('nome','email','mensagem','.envio-erro','.envio-sucesso')">Enviar Mensagem</button>
+                        <div class="select-box">
+                            <div class="selected-option">
+                                <div>
+                                    <span class="iconify" data-icon="flag:gb-4x3"></span>
+                                    <strong>+44</strong>
+                                </div>
+                                <input type="tel" name="tel" placeholder="Phone Number">
+                            </div>
+                            <div class="options">
+                                <input type="text" name="search-box" placeholder="Search Country Name">
+                            
+                            <ol>
+                                <li class="option">
+                                    <div>
+                                        <span class="iconify" data-icon="flag:gb-4x3"></span>
+                                        <span class="country-name">United Kingdom</span>
+                                    </div>
+                                    <strong>+44</strong>
+                                </li>
+                                <li class="option">
+                                    <div>
+                                        <span class="iconify" data-icon="flag:us-4x3"></span>
+                                        <span class="country-name">United States</span>
+                                    </div>
+                                    <strong>+1</strong>
+                                </li>
+                            </ol>
+                            </div>
+                        </div>
+                            <button id="enviar" onclick="sendEmail('nome','email','mensagem','.envio-erro','.envio-sucesso')">Enviar Mensagem</button>
                     </div>
                     <textarea id="mensagem" maxlength="450" placeholder="Escreva a sua mensagem aqui..."></textarea>
                 </div>
@@ -211,10 +241,13 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
  
     <!-- Scripts locais: Aniamacoes -->
     <script src="javascript/animacoes/chart.js"></script>
     <script src="javascript/animacoes/Gsap.js"></script>
+    <script src="javascript/animacoes/logo3D.js"></script>
 
     <!-- Scripts locais: Eventos -->
     <script src="javascript/eventos/scrollButton.js"></script>
@@ -223,8 +256,9 @@
     <script src="javascript/eventos/saberMaisBtn.js"></script>
     
     <!-- Scripts locais: Formulario handler -->
+    <script src="https://cdn.jsdelivr.net/npm/libphonenumber-js/bundle/libphonenumber-min.js"></script>
     <script src="javascript/formulario/form-handler.js"></script>
-    <script src="javascript/animations.js"></script>
-
+    <script src="javascript/formulario/paises.js"></script>
+    <script src="javascript/formulario/telefone.js"></script>
 </body>
 </html>
