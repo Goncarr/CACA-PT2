@@ -178,24 +178,24 @@
         <div id="Contactos"></div>
         <div class="footer-container">
             <div class="contactos">
-                <h1>Contactos</h1>
+                <h1>Contactos<br></h1>
                 <p>Email: 2acaca@uac.pt</p>
                 <p>Telefone: 250 620 910</p>
                 <p>Morada: Rua das Hortênsias Azuis 3, 9520-509 Lagoa</p>
             </div>
             <div class="email">
-                <h1>Envie Um Email</h1>
+                <h1>Envie Um Email<br> (*) obrigatório</h1>
                 <div class="email-conteudo">
                     <div class="email-campos">
-                        <input id="nome" type="text" placeholder="Nome">
-                        <input id="email" type="email" placeholder="Email">
+                        <input id="nome" type="text" placeholder="Nome*">
+                        <input id="email" type="email" placeholder="Email*">
                         <div class="select-box">
                             <div class="selected-option">
                                 <div>
                                     <span class="iconify" data-icon="flag:gb-4x3"></span>
                                     <strong>+44</strong>
                                 </div>
-                                <input type="tel" name="tel" placeholder="Phone Number">
+                                <input type="tel" name="tel" placeholder="Phone Number*">
                             </div>
                             <div class="options">
                                 <input type="text" name="search-box" placeholder="Search Country Name">
@@ -220,7 +220,7 @@
                         </div>
                             <button id="enviar" onclick="sendEmail('nome','email','mensagem','.envio-erro','.envio-sucesso')">Enviar Mensagem</button>
                     </div>
-                    <textarea id="mensagem" maxlength="450" placeholder="Escreva a sua mensagem aqui..."></textarea>
+                    <textarea id="mensagem" maxlength="450" placeholder="Escreva a sua mensagem aqui... *"></textarea>
                 </div>
             </div>
         </div>

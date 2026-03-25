@@ -37,8 +37,6 @@ function selectOption(){
 
     selected_option.textContent = '';
     selected_option.append(icon,phone_code);
-
-    input_box.value = phone_code.textContent;
 }
 
 /**
