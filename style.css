@@ -39,7 +39,6 @@ a {
     --cor-preto:           #000000;
     --cor-botao:           #3865D7;
     --cor-input--cinzento: #808080;
-    --cor--amarelo:        #FFCB21;
 }
 
 /*CABEÇALHO*/
@@ -573,7 +572,7 @@ footer input {
     width: 100%;
     background-color: var(--cor-branco);
     z-index: 200;
-    display: none;                          /* hidden by default */
+    display: none;
     border: solid 2px var(--cor-input--cinzento);
     border-top: none;
     display: none;
@@ -589,8 +588,8 @@ footer input {
 }
 
 input.search-box {
-    background-color: #1a1a1a;             /* dark background like the video */
-    color: var(--cor-branco);              /* white text on dark bg */
+    background-color: #1a1a1a;
+    color: var(--cor-branco);
     border: none;
     border-bottom: 1px solid #444;
     padding: 0.7rem;

@@ -1,5 +1,3 @@
-
-
 /**
  * A função verifica se o email está num formato aceitavel
  *  através de um regex, no qual verifica se

@@ -2,6 +2,10 @@ let slideIndex = 1;
 let slideTimer;
 showSlides(slideIndex);
 
+/**
+ * Move os slides para a direita ou esqueda dependendo da seta que foi clicada
+ * @param {int} direction - direcao que os slides devem mover-se
+ */
 function plusSlides(direction) {
   clearTimeout(slideTimer); 
   showSlides(slideIndex += direction);

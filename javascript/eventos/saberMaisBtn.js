@@ -2,7 +2,7 @@ const btnInvestigacao = document.querySelectorAll('button[name="investigacaoBota
 
 /***
  * Expoe texto para o utilizador caso ele clique no botão de "saber mais".
- * @param {} btn - botão que foi clicado
+ * @param {HTMLElement} btn - botão que foi clicado
  */
 btnInvestigacao.forEach((btn) => {
     btn.addEventListener("click", function() {
