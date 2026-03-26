@@ -39,6 +39,7 @@ a {
     --cor-preto:           #000000;
     --cor-botao:           #3865D7;
     --cor-input--cinzento: #808080;
+    --cor--amarelo:        #FFCB21;
 }
 
 /*CABEÇALHO*/
@@ -483,6 +484,19 @@ footer input {
     display: flex;
     gap: 1rem;
     align-items: stretch;
+}
+
+.mensagem-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.quick-message{
+    border: solid 2px var(--cor-input--cinzento);
+    background-color: var(--cor-branco);
+    font-size: 1rem;
+    color:  var(--cor-input--cinzento);
 }
 
 .email-campos {

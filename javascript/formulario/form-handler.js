@@ -21,6 +21,17 @@ function validatePhone(phone) {
 }
 
 /**
+ * 
+ * @param {htmlElement} quickReplyText 
+ * @param {htmlElement} form 
+ */
+function selectQuickMessage(form, quickMessage){
+  const formEl = document.getElementById(form);
+  const quickMessageEl = document.getElementById(quickMessage)
+  formEl.value = quickMessageEl.value;
+}
+
+/**
  * A função verifica se o utilizador tem todos os parametros do formulário preenchidos, estes sendo
  * o nome, email e mensagem. Em caso de falha é exposto no ecrã uma mensagem de erro, indicando o
  * parametro não preenchido ou inválido. Caso estejam em um formato aceitavel, é exposto ao

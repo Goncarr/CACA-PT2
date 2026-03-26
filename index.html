@@ -220,8 +220,16 @@
                         </div>
                             <button id="enviar" onclick="sendEmail('nome','email','mensagem','.envio-erro','.envio-sucesso')">Enviar Mensagem</button>
                     </div>
-                    <div class="assunto"></div>
-                    <textarea id="mensagem" maxlength="450" placeholder="Escreva a sua mensagem aqui... *"></textarea>
+                    <div class="mensagem-container">
+                        <select class="quick-message" id="quickMessage" onchange="selectQuickMessage('mensagem','quickMessage')">
+                            <option value="">Quick replies</option>
+                            <option value="Gostaria de Saber se o projeto [proejeto] está disponível">Projetos de Investigação</option>
+                            <option value="Gostaria de saber quais formações são oferecidas pelo centro">Formação e Ensino</option>
+                            <option value="Estou interessado em realizar uma colobaroção com o CACA">Parcerias e Protocolos</option>
+                            <option value="Gostaria de informar-me em como posso realizar os meus estudos no CACA">Apoio ao Estudante</option>
+                        </select>
+                        <textarea id="mensagem" maxlength="450" placeholder="Escreva a sua mensagem aqui... *"></textarea>
+                    </div>
                 </div>
             </div>
         </div>
